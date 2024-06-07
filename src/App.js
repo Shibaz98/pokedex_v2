@@ -7,7 +7,7 @@ function App() {
 
 
 const search = (term) =>{
-
+  console.log(term)
 };
 
   return (

@@ -7,14 +7,16 @@ function SearchBar(props){
     
     const handleChange = (event) =>{
         setSearchTerm(event.target.value.toLowerCase())
-        console.log(searchTerm)
     }
 
+    const handleClick = () =>{
+        props.search(searchTerm)
+    };
 
     return(
         <div>
             <input type="text" onChange={handleChange}/>
-            <button>Search</button>
+            <button onClick={handleClick}>Search</button>
         </div>
     )
 };
