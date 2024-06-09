@@ -2,13 +2,19 @@ import './App.css';
 import React, { useState } from 'react';
 import SearchBar from './searchBar/searchBar';
 import SearchResult from './SearchResult/SearchResult';
+import pokemon from './Util/pokemon';
 
 function App() {
+
+  const [searchResults, setSearchResults] = useState([]); 
 
 
 
 const search = (term) =>{
-  console.log(term)
+  
+  pokemon.search(term).then(setSearchResults);
+  console.log(searchResults)
+  
 };
 
   return (
