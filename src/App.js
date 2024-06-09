@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import SearchBar from './searchBar/searchBar';
 import SearchResult from './SearchResult/SearchResult';
 import pokemon from './Util/pokemon';
@@ -13,7 +13,7 @@ function App() {
 const search = (term) =>{
   
   pokemon.search(term).then(setSearchResults);
-  console.log(searchResults)
+  
   
 };
 
@@ -22,7 +22,7 @@ const search = (term) =>{
       <h1>React Pokedex-v2</h1>
       <SearchBar search={search}/> 
       <div className='SearchResultSection'>
-        <SearchResult/>
+        <SearchResult pokemon={searchResults}/>
       </div>
     </div>
   );

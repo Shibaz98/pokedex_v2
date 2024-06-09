@@ -4,7 +4,7 @@ import PokemonDisplay from '../PokemonDisplay/PokemonDisplay';
 function SearchResult(props){
     return(
         <div className="SearchResultContainer">
-            <PokemonDisplay/> 
+            <PokemonDisplay pokemon={props.pokemon}/> 
         </div>
     );
 };
