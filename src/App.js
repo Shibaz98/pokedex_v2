@@ -20,7 +20,6 @@ const getPokemon = (pokemon) =>{
       alert('can only choose 3')
     }
   });
-  console.log(starter)
 }; 
 
 const search = (term) =>{
@@ -35,7 +34,7 @@ const search = (term) =>{
         <SearchResult pokemon={searchResults} getPokemon={getPokemon}/>
       </div>
       <div className='CollectionSection'>
-        <Collection/>
+        <Collection starter={starter}/>
       </div>
     </div>
   );
