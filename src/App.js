@@ -7,8 +7,21 @@ import Collection from './Collection/Collection';
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState([]); 
+  const [searchResults, setSearchResults] = useState([]);
+  const [starter, setStarter] = useState([]);
+  
+  
+const getPokemon = (pokemon) =>{
 
+  setStarter(prev =>{
+    if (prev.length < 3){
+      return [...prev, pokemon]
+    } else {
+      alert('can only choose 3')
+    }
+  });
+  console.log(starter)
+}; 
 
 const search = (term) =>{
   pokemon.search(term).then(setSearchResults);
@@ -19,7 +32,7 @@ const search = (term) =>{
       <h1>React Pokedex-v2</h1>
       <SearchBar search={search}/> 
       <div className='SearchResultSection'>
-        <SearchResult pokemon={searchResults}/>
+        <SearchResult pokemon={searchResults} getPokemon={getPokemon}/>
       </div>
       <div className='CollectionSection'>
         <Collection/>
