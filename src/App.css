@@ -8,3 +8,10 @@
   align-items: center;
   margin-top: 10px;
 }
+
+.CollectionSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}

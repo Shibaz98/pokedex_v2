@@ -3,18 +3,15 @@ import React, { useCallback, useState } from 'react';
 import SearchBar from './searchBar/searchBar';
 import SearchResult from './SearchResult/SearchResult';
 import pokemon from './Util/pokemon';
+import Collection from './Collection/Collection';
 
 function App() {
 
   const [searchResults, setSearchResults] = useState([]); 
 
 
-
 const search = (term) =>{
-  
   pokemon.search(term).then(setSearchResults);
-  
-  
 };
 
   return (
@@ -23,6 +20,9 @@ const search = (term) =>{
       <SearchBar search={search}/> 
       <div className='SearchResultSection'>
         <SearchResult pokemon={searchResults}/>
+      </div>
+      <div className='CollectionSection'>
+        <Collection/>
       </div>
     </div>
   );

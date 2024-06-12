@@ -1,3 +1,22 @@
 img{
     width: 300px;
 }
+
+.button_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container > button{
+    margin-left: 10px;
+    height: 30px;
+    width: fit-content;
+    font-weight: 200;
+}
+
+.button_container > button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
