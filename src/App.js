@@ -13,13 +13,12 @@ function App() {
   
 const getPokemon = (pokemon) =>{
 
-  setStarter(prev =>{
-    if (prev.length < 3){
-      return [...prev, pokemon]
-    } else {
-      alert('can only choose 3')
-    }
-  });
+  if(starter.length < 3){
+    setStarter((prev) => [...prev, pokemon])
+  } else {
+    alert('Can only choose 3 Pokemon')
+  }; 
+  
 }; 
 
 const search = (term) =>{
