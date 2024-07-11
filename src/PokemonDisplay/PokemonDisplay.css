@@ -10,9 +10,10 @@ img{
 
 .button_container > button{
     margin-left: 10px;
-    height: 30px;
+    height: 40px;
     width: fit-content;
     font-weight: 200;
+    margin-right: 10px;
 }
 
 .button_container > button:hover{
